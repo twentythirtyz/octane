@@ -1,0 +1,4 @@
+# Octane messages.yml
+
+prefix: "&8[&bOctane&8] "
+no-permission: "&cYou do not have permission to run this command!"
