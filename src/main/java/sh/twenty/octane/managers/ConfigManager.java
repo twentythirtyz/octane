@@ -27,4 +27,11 @@ public class ConfigManager {
     public FileConfiguration getMessages(){
         return messagesConfig;
     }
+
+
+    public void reloadConfigs(){
+        plugin.reloadConfig();
+
+        messagesConfig = YamlConfiguration.loadConfiguration(messagesFile);
+    }
 }

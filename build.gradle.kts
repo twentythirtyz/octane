@@ -35,7 +35,6 @@ tasks.withType<JavaCompile> {
 }
 
 
-
 bukkit {
     main = "sh.twenty.octane.Main"
     name = "octane"
@@ -44,7 +43,6 @@ bukkit {
     author = "twenty1989"
     description = "something made by real people"
 
-    // Keep your commands here so Gradle registers them for you!
     commands {
         register("heal") {
             description = "Restores a player's health to full."
@@ -54,5 +52,10 @@ bukkit {
             description = "Restores a player's hunger to full."
             usage = "/feed"
         }
+        register("octane"){
+            description = "Reloads the plugins configuration files."
+            usage = "/octane reload"
+        }
     }
 }
+

@@ -11,26 +11,28 @@ public class FeedCommand extends PlayerCommand {
     }
 
     @Override
-    public void execute(Player player, String[] args){
+    public boolean execute(Player player, String[] args){
 
         if (args.length >= 1) {
             if (!player.hasPermission("octane.feed.others")){
                 String rawMessage = plugin.getConfigManager().getMessages().getString("no-permission", "&cNo permission!");
                 player.sendMessage(ChatUtil.color(rawMessage));
-                return;
+                return false;
             }
 
             Player target = plugin.getServer().getPlayer(args[0]);
 
             if(target == null){
                 sendPrefixedMessage(player, "&7Could not find player: " + args[0]);
-                return;
+                return false;
             }
 
-            target.setHealth(20.0);
+            target.setFoodLevel(20);
+            target.setSaturation(20f);
 
-            sendPrefixedMessage(player, "&7You were apetite was sated by " + player.getName() + ".");
-            return;
+            sendPrefixedMessage(player, "&7You have sated " + target.getName() + "'s appetite.");
+            sendPrefixedMessage(target, "&7You were appetite was sated by " + player.getName() + ".");
+            return true;
         }
 
 
@@ -38,6 +40,7 @@ public class FeedCommand extends PlayerCommand {
         player.setFoodLevel(20);
         player.setSaturation(20f);
 
-        sendPrefixedMessage(player, "&7Your apetite has been sated.");
+        sendPrefixedMessage(player, "&7Your appetite has been sated.");
+        return true;
     }
 }

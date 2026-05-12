@@ -18,6 +18,15 @@ public abstract class PlayerCommand implements CommandExecutor {
         this.permission = permission;
     }
 
+    public void register(String commandName) {
+        org.bukkit.command.PluginCommand cmd = plugin.getCommand(commandName);
+        if (cmd != null){
+            cmd.setExecutor(this);
+        } else {
+            plugin.getLogger().warning("Failed to register the command: " + commandName);
+        }
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
@@ -32,11 +41,10 @@ public abstract class PlayerCommand implements CommandExecutor {
             return true;
         }
 
-        execute(player, args);
-        return true;
+        return execute(player, args);
     }
 
-    public abstract void execute(Player player, String[] args);
+    public abstract boolean execute(Player player, String[] args);
 
     protected void sendPrefixedMessage(Player player, String message) {
         String prefix = plugin.getConfigManager().getMessages().getString("prefix", "&8[&bOctane&8] ");
