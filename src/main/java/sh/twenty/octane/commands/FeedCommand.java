@@ -23,8 +23,8 @@ public class FeedCommand extends PlayerCommand {
             Player target = plugin.getServer().getPlayerExact(args[0]);
 
             if(target == null){
-                sendPrefixedMessage(player, "&7Could not find player: " + args[0]);
-                return false;
+                sendPrefixedMessage(player, "&cCould not find player: " + args[0]);
+                return true;
             }
 
             target.setFoodLevel(20);

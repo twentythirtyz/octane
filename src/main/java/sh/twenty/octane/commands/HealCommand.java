@@ -26,7 +26,7 @@ public class HealCommand extends PlayerCommand {
 
             if (target == null){
                 sendPrefixedMessage(player, "&cCould not find player: " + args[0]);
-                return false;
+                return true;
             }
 
             target.setHealth(20.0);

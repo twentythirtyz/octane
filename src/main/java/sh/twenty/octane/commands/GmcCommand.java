@@ -22,7 +22,7 @@ public class GmcCommand extends PlayerCommand {
 
             if (target == null){
                 sendPrefixedMessage(player, "&cCould not find player: " + args[0]);
-                return false;
+                return true;
             }
 
             target.setGameMode(GameMode.CREATIVE);
