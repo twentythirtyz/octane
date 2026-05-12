@@ -2,3 +2,12 @@
 
 prefix: "&8[&bOctane&8] "
 no-permission: "&cYou do not have permission to run this command!"
+player-not-found: "&cCould not find player: %player%"
+
+gmc-success-self: "&7Your gamemode was set to Creative."
+gmc-success-other: "&7%player%'s gamemode was set to Creative."
+gmc-success-target: "&7Your gamemode was set to Creative by %sender%."
+
+gms-success-self: "&7Your gamemode was set to Survival."
+gms-success-other: "&7%player%'s gamemode was set to Survival."
+gms-success-target: "&7Your gamemode was set to Survival by %sender%."
