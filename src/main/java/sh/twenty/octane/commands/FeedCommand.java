@@ -20,7 +20,7 @@ public class FeedCommand extends PlayerCommand {
                 return false;
             }
 
-            Player target = plugin.getServer().getPlayer(args[0]);
+            Player target = plugin.getServer().getPlayerExact(args[0]);
 
             if(target == null){
                 sendPrefixedMessage(player, "&7Could not find player: " + args[0]);

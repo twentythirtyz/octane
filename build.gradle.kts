@@ -56,6 +56,10 @@ bukkit {
             description = "Reloads the plugins configuration files."
             usage = "/octane reload"
         }
+        register("gmc"){
+            description = "Sets the player's gamemode to creative."
+            usage = "/gmc"
+        }
     }
 }
 
