@@ -2,6 +2,7 @@ package sh.twenty.octane;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import sh.twenty.octane.commands.*;
+import sh.twenty.octane.listeners.PlayerJoinListener;
 import sh.twenty.octane.managers.ConfigManager;
 import org.slf4j.Logger;
 
@@ -25,7 +26,7 @@ public final class Main extends JavaPlugin {
 
         // 3. Register everything else
         registerCommands();
-        //registerListeners();
+        registerListeners();
     }
 
     public ConfigManager getConfigManager() {
@@ -49,7 +50,10 @@ public final class Main extends JavaPlugin {
     }
 
 
-//    private void registerListeners() {
-    // Logic for event listeners
-//    }
+    private void registerListeners(){
+        // we get the bukkit pluginmanager
+        org.bukkit.plugin.PluginManager pm = getServer().getPluginManager();
+        // this registers the playerjoinlistener how i know
+        pm.registerEvents(new PlayerJoinListener(this), this);
+    }
 }

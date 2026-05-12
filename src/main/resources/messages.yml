@@ -11,3 +11,7 @@ gmc-success-target: "&7Your gamemode was set to Creative by %sender%."
 gms-success-self: "&7Your gamemode was set to Survival."
 gms-success-other: "&7%player%'s gamemode was set to Survival."
 gms-success-target: "&7Your gamemode was set to Survival by %sender%."
+
+
+#Listeners
+join-message: "&fComing Soon!"
