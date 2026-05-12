@@ -1,6 +1,6 @@
 package sh.twenty.octane.commands;
 
-// IMPORTANT: Double-check that these exact imports are the ones being used!
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,7 +18,6 @@ public abstract class PlayerCommand implements CommandExecutor {
         this.permission = permission;
     }
 
-    // Notice we removed the @NotNull annotations here to prevent compiler mismatches
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 

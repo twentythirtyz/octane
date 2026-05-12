@@ -35,7 +35,7 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        // We do a quick null check just to be absolutely safe
+
         if (logger != null) {
             logger.info("Disabling Octane...");
         }
