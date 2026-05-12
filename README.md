@@ -8,16 +8,6 @@ A lightweight, custom Minecraft Bukkit plugin designed with performance and clea
 * **Custom Configurations:** Easily edit settings and plugin messages via auto-generating `config.yml` and `messages.yml` files.
 * **Color Code Support:** Full support for legacy `&` color codes in all configuration messages.
 
-## Commands & Permissions
-
-| Command          | Description                                             | Permission           |
-|:-----------------|:--------------------------------------------------------|:---------------------|
-| `/heal`          | Restores your health to full.                           | `octane.heal`        |
-| `/heal <player>` | Restores the target player's health to full.            | `octane.heal.others` |
-| `/feed`          | Restores your hunger and saturation to full.            | `octane.feed`        |
-| `/feed <player>` | Restores the target player's saturation to full.        | `octane.feed.others` |
-
-
 ## Installation
 1. Compile the project using Gradle or download the latest `octane-1.0-SNAPSHOT.jar`.
 2. Place the `.jar` file into your Minecraft server's `plugins/` folder.
@@ -39,5 +29,3 @@ To build the plugin into a usable `.jar` file:
 2. Run the Gradle `clean` and `build` tasks.
 3. The compiled jar will be generated and located in `build/libs/`.
 
-## Author
-* **twenty1989** - made the codebase he sigma

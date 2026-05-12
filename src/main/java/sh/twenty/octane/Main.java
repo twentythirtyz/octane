@@ -1,10 +1,7 @@
 package sh.twenty.octane;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import sh.twenty.octane.commands.FeedCommand;
-import sh.twenty.octane.commands.GmcCommand;
-import sh.twenty.octane.commands.HealCommand;
-import sh.twenty.octane.commands.OctaneCommand;
+import sh.twenty.octane.commands.*;
 import sh.twenty.octane.managers.ConfigManager;
 import org.slf4j.Logger;
 
@@ -48,6 +45,7 @@ public final class Main extends JavaPlugin {
         getCommand("heal").setExecutor(new HealCommand(this));
         getCommand("octane").setExecutor(new OctaneCommand(this));
         getCommand("gmc").setExecutor(new GmcCommand(this));
+        getCommand("gms").setExecutor(new GmsCommand(this));
     }
 
 

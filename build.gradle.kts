@@ -40,8 +40,8 @@ bukkit {
     name = "octane"
     version = project.version.toString()
     apiVersion = "1.21"
-    author = "twenty1989"
-    description = "something made by real people"
+    author = "twentythirtyz"
+    description = "lightweight solution to heavy problems"
 
     commands {
         register("heal") {
@@ -59,6 +59,10 @@ bukkit {
         register("gmc"){
             description = "Sets the player's gamemode to creative."
             usage = "/gmc"
+        }
+        register("gms"){
+            description = "Sets the player's gamemode to survival."
+            usage = "/gms"
         }
     }
 }

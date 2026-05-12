@@ -12,7 +12,7 @@ public class GmcCommand extends PlayerCommand {
     public boolean execute(Player player, String[] args){
         if (args.length >= 1){
 
-                    if(!player.hasPermission("octane.gmc.others")){
+            if(!player.hasPermission("octane.gmc.others")){
                 String rawMessage = plugin.getConfigManager().getMessages().getString("no-permission", "&cNo permission!");
                 player.sendMessage(ChatUtil.color(rawMessage));
                 return false;
