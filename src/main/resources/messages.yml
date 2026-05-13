@@ -13,5 +13,11 @@ gms-success-other: "&7%player%'s gamemode was set to Survival."
 gms-success-target: "&7Your gamemode was set to Survival by %sender%."
 
 
+gmsp-success-self: "&7Your gamemode was set to Spectator"
+gmsp-success-other: "&7%player%'s gamemode was set to Spectator"
+gmsp-success-target: "&7Your gamemode was set to Spectator by %sender%"
+
 #Listeners
 join-message: "&fComing Soon!"
+
+
