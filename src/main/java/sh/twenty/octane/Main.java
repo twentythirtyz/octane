@@ -47,6 +47,7 @@ public final class Main extends JavaPlugin {
         getCommand("octane").setExecutor(new OctaneCommand(this));
         getCommand("gmc").setExecutor(new GmcCommand(this));
         getCommand("gms").setExecutor(new GmsCommand(this));
+        getCommand("gmsp").setExecutor(new GmspCommand(this));
     }
 
 
