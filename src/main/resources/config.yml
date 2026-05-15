@@ -1,57 +1,53 @@
-#octane config.yml remake
-
-
-# menus
 menus:
-    settings:
-        title: "&8Server Settings"
-        size: 27
-        items:
-            pvp:
-                slot: 11
-                true-state:
-                    material: LIME_WOOL
-                    name: "&e&lPvP Toggle"
-                    lore:
-                        - "&7Current: &aEnabled"
-                        - ""
-                        - "&eClick to disable!"
-                false-state:
-                    material: RED_WOOL
-                    name: "&e&lPvP Toggle"
-                    lore:
-                        - "&7Current: &cDisabled"
-                        - ""
-                        - "&eClick to enable!"
-            time:
-                slot: 13
-                true-state:
-                    material: SUNFLOWER
-                    name: "&b&lTime Toggle"
-                    lore:
-                        - "&7Current: &eDay"
-                        - ""
-                        - "&eClick to set Night!"
-                false-state:
-                    material: CLOCK
-                    name: "&b&lTime Toggle"
-                    lore:
-                        - "&7Current: &9Night"
-                        - ""
-                        - "&eClick to set Day!"
-            weather:
-                slot: 15
-                true-state:
-                    material: WATER_BUCKET
-                    name: "&d&lWeather Toggle"
-                    lore:
-                        - "&7Current: &9Raining"
-                        - ""
-                        - "&eClick to clear weather!"
-                false-state:
-                    material: LAVA_BUCKET
-                    name: "&d&lWeather Toggle"
-                    lore:
-                        - "&7Current: &6Clear"
-                        - ""
-                        - "&eClick to make it rain!"
+  settings:
+    title: "<dark_gray>Server Settings"
+    size: 27
+    items:
+      pvp:
+        slot: 11
+        true-state:
+          material: LIME_WOOL
+          name: "<yellow><bold>PvP Toggle"
+          lore:
+            - "<gray>Current: <green>Enabled"
+            - ""
+            - "<yellow>Click to disable!"
+        false-state:
+          material: RED_WOOL
+          name: "<yellow><bold>PvP Toggle"
+          lore:
+            - "<gray>Current: <red>Disabled"
+            - ""
+            - "<yellow>Click to enable!"
+      time:
+        slot: 13
+        true-state:
+          material: SUNFLOWER
+          name: "<aqua><bold>Time Toggle"
+          lore:
+            - "<gray>Current: <yellow>Day"
+            - ""
+            - "<yellow>Click to set Night!"
+        false-state:
+          material: CLOCK
+          name: "<aqua><bold>Time Toggle"
+          lore:
+            - "<gray>Current: <blue>Night"
+            - ""
+            - "<yellow>Click to set Day!"
+      weather:
+        slot: 15
+        true-state:
+          material: WATER_BUCKET
+          name: "<light_purple><bold>Weather Toggle"
+          lore:
+            - "<gray>Current: <blue>Raining"
+            - ""
+            - "<yellow>Click to clear weather!"
+        false-state:
+          material: LAVA_BUCKET
+          name: "<light_purple><bold>Weather Toggle"
+          lore:
+            - "<gray>Current: <gold>Clear"
+            - ""
+            - "<yellow>Click to make it rain!"

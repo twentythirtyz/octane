@@ -1,31 +1,49 @@
 # Octane
 
-A lightweight, custom Minecraft Bukkit plugin designed with performance and clean code architecture in mind. Built for Minecraft 1.21.
+[![Build](https://github.com/twentythirtyz/octane/actions/workflows/build.yml/badge.svg)](https://github.com/twentythirtyz/octane/actions/workflows/build.yml)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.0-purple?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
+[![Java](https://img.shields.io/badge/Java-21-orange?logo=openjdk&logoColor=white)](https://adoptium.net/)
+[![Paper](https://img.shields.io/badge/Paper-1.21-blue?logo=minecraft&logoColor=white)](https://papermc.io/)
 
-## Features
-* **Modular Command System:** Clean, abstract-based command architecture (`PlayerCommand`).
-* **Target Support:** Execute commands on yourself or target other players safely.
-* **Custom Configurations:** Easily edit settings and plugin messages via auto-generating `config.yml` and `messages.yml` files.
-* **Color Code Support:** Full support for legacy `&` color codes in all configuration messages.
+Lightweight Paper plugin for Minecraft 1.21 written in Kotlin. Covers the basic admin commands and a settings GUI, nothing more.
 
-## Installation
-1. Compile the project using Gradle or download the latest `octane-1.0-SNAPSHOT.jar`.
-2. Place the `.jar` file into your Minecraft server's `plugins/` folder.
-3. Start or restart your server.
-4. Edit the generated `config.yml` and `messages.yml` files in the `plugins/octane` directory to customize the plugin.
-5. Restart the server to apply configuration changes.
+## Stack
 
-## Development & Building
-This project is built using **Gradle** (Kotlin DSL) and targets the Bukkit/Paper 1.21 API using Java 21.
+| Area     | Tech                        |
+|----------|-----------------------------|
+| API      | Paper 1.21                  |
+| Language | Kotlin 2.0                  |
+| Commands | CommandAPI                  |
+| Text     | Adventure / MiniMessage     |
+| Config   | kaml (typed YAML)           |
+| Testing  | MockBukkit                  |
+| CI       | GitHub Actions              |
 
-### Project Structure
-* `commands/` - Contains all command executors extending the base `PlayerCommand`.
-* `managers/` - Contains core logic handlers like `ConfigManager`.
-* `utils/` - Contains helper tools like `ChatUtil`.
+## Commands
 
-### Build Instructions
-To build the plugin into a usable `.jar` file:
-1. Open the project in IntelliJ IDEA (or your preferred IDE).
-2. Run the Gradle `clean` and `build` tasks.
-3. The compiled jar will be generated and located in `build/libs/`.
+| Command | Description | Permission |
+|---------|-------------|------------|
+| `/heal [player]` | Restore health | `octane.heal` / `octane.heal.others` |
+| `/feed [player]` | Restore hunger | `octane.feed` / `octane.feed.others` |
+| `/gmc [player]` | Gamemode creative | `octane.gmc` / `octane.gmc.others` |
+| `/gms [player]` | Gamemode survival | `octane.gms` / `octane.gms.others` |
+| `/gmsp [player]` | Gamemode spectator | `octane.gmsp` / `octane.gmsp.others` |
+| `/settings` | Open server settings GUI | `octane.admin` |
+| `/octane reload` | Reload config files | `octane.admin` |
 
+## Building
+
+Requires Java 21.
+
+```bash
+./gradlew build
+```
+
+Jar is output to `build/libs/`. Kotlin stdlib and CommandAPI are shaded in automatically.
+
+## Configuration
+
+Two files are generated in `plugins/octane/` on first run:
+
+- `config.yml` - GUI layout (slot positions, materials, MiniMessage names/lore)
+- `messages.yml` - all player-facing strings in MiniMessage format, supports `%player%` and `%sender%` placeholders
