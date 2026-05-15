@@ -36,6 +36,9 @@ class OctanePlugin : JavaPlugin() {
         GmcCommand(this).register()
         GmsCommand(this).register()
         GmspCommand(this).register()
+        GmaCommand(this).register()
+        FlyCommand(this).register()
+        FlySpeedCommand(this).register()
         OctaneCommand(this).register()
         SettingsCommand(this).register()
     }

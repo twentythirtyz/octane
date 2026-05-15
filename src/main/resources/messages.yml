@@ -23,6 +23,21 @@ gmsp-self: "<gray>Your gamemode was set to <white>Spectator<gray>."
 gmsp-other: "<gray><white>%player%<gray>'s gamemode was set to <white>Spectator<gray>."
 gmsp-target: "<gray>Your gamemode was set to <white>Spectator<gray> by <white>%sender%<gray>."
 
+gma-self: "<gray>Your gamemode was set to <white>Adventure<gray>."
+gma-other: "<gray><white>%player%<gray>'s gamemode was set to <white>Adventure<gray>."
+gma-target: "<gray>Your gamemode was set to <white>Adventure<gray> by <white>%sender%<gray>."
+
+fly-enabled: "<gray>Flight <white>enabled<gray>."
+fly-disabled: "<gray>Flight <white>disabled<gray>."
+fly-enabled-other: "<gray>Flight <white>enabled<gray> for <white>%player%<gray>."
+fly-disabled-other: "<gray>Flight <white>disabled<gray> for <white>%player%<gray>."
+fly-enabled-target: "<gray>Flight <white>enabled<gray> by <white>%sender%<gray>."
+fly-disabled-target: "<gray>Flight <white>disabled<gray> by <white>%sender%<gray>."
+
+flyspeed-self: "<gray>Fly speed set to <white>%speed%<gray>."
+flyspeed-other: "<gray>Fly speed of <white>%player%<gray> set to <white>%speed%<gray>."
+flyspeed-target: "<gray>Fly speed set to <white>%speed%<gray> by <white>%sender%<gray>."
+
 join-message: "<white>Coming soon!"
 config-reloaded: "<gray>Configuration reloaded."
 octane-usage: "<gray>Usage: <white>/octane reload"

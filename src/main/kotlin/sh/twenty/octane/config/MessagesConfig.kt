@@ -32,6 +32,21 @@ data class MessagesConfig(
     @SerialName("gmsp-other")  val gmspOther: String  = "<gray><white>%player%<gray>'s gamemode was set to <white>Spectator<gray>.",
     @SerialName("gmsp-target") val gmspTarget: String = "<gray>Your gamemode was set to <white>Spectator<gray> by <white>%sender%<gray>.",
 
+    @SerialName("gma-self")    val gmaSelf: String    = "<gray>Your gamemode was set to <white>Adventure<gray>.",
+    @SerialName("gma-other")   val gmaOther: String   = "<gray><white>%player%<gray>'s gamemode was set to <white>Adventure<gray>.",
+    @SerialName("gma-target")  val gmaTarget: String  = "<gray>Your gamemode was set to <white>Adventure<gray> by <white>%sender%<gray>.",
+
+    @SerialName("fly-enabled")        val flyEnabled: String        = "<gray>Flight <white>enabled<gray>.",
+    @SerialName("fly-disabled")       val flyDisabled: String       = "<gray>Flight <white>disabled<gray>.",
+    @SerialName("fly-enabled-other")  val flyEnabledOther: String   = "<gray>Flight <white>enabled<gray> for <white>%player%<gray>.",
+    @SerialName("fly-disabled-other") val flyDisabledOther: String  = "<gray>Flight <white>disabled<gray> for <white>%player%<gray>.",
+    @SerialName("fly-enabled-target") val flyEnabledTarget: String  = "<gray>Flight <white>enabled<gray> by <white>%sender%<gray>.",
+    @SerialName("fly-disabled-target") val flyDisabledTarget: String = "<gray>Flight <white>disabled<gray> by <white>%sender%<gray>.",
+
+    @SerialName("flyspeed-self")   val flyspeedSelf: String   = "<gray>Fly speed set to <white>%speed%<gray>.",
+    @SerialName("flyspeed-other")  val flyspeedOther: String  = "<gray>Fly speed of <white>%player%<gray> set to <white>%speed%<gray>.",
+    @SerialName("flyspeed-target") val flyspeedTarget: String = "<gray>Fly speed set to <white>%speed%<gray> by <white>%sender%<gray>.",
+
     @SerialName("join-message")
     val joinMessage: String = "<white>Coming soon!",
     @SerialName("config-reloaded")

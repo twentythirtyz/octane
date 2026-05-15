@@ -28,6 +28,9 @@ Lightweight Paper plugin for Minecraft 1.21 written in Kotlin. Covers the basic 
 | `/gmc [player]` | Gamemode creative | `octane.gmc` / `octane.gmc.others` |
 | `/gms [player]` | Gamemode survival | `octane.gms` / `octane.gms.others` |
 | `/gmsp [player]` | Gamemode spectator | `octane.gmsp` / `octane.gmsp.others` |
+| `/gma [player]` | Gamemode adventure | `octane.gma` / `octane.gma.others` |
+| `/fly [player]` | Toggle flight | `octane.fly` / `octane.fly.others` |
+| `/flyspeed <1-10> [player]` | Set fly speed | `octane.flyspeed` / `octane.flyspeed.others` |
 | `/settings` | Open server settings GUI | `octane.admin` |
 | `/octane reload` | Reload config files | `octane.admin` |
 
