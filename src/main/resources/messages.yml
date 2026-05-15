@@ -1,23 +1,43 @@
-# Octane messages.yml
+prefix: "<dark_gray>[<aqua>Octane<dark_gray>] <reset>"
 
-prefix: "&8[&bOctane&8] "
-no-permission: "&cYou do not have permission to run this command!"
-player-not-found: "&cCould not find player: %player%"
+no-permission: "<red>You do not have permission!"
+player-not-found: "<red>Could not find player: <white>%player%"
 
-gmc-success-self: "&7Your gamemode was set to Creative."
-gmc-success-other: "&7%player%'s gamemode was set to Creative."
-gmc-success-target: "&7Your gamemode was set to Creative by %sender%."
+heal-self: "<gray>You have been fully healed."
+heal-other: "<gray>Healed <white>%player%<gray>."
+heal-target: "<gray>You were healed by <white>%sender%<gray>."
 
-gms-success-self: "&7Your gamemode was set to Survival."
-gms-success-other: "&7%player%'s gamemode was set to Survival."
-gms-success-target: "&7Your gamemode was set to Survival by %sender%."
+feed-self: "<gray>Your appetite has been sated."
+feed-other: "<gray>You have sated <white>%player%'s<gray> appetite."
+feed-target: "<gray>Your appetite was sated by <white>%sender%<gray>."
 
+gmc-self: "<gray>Your gamemode was set to <white>Creative<gray>."
+gmc-other: "<gray><white>%player%<gray>'s gamemode was set to <white>Creative<gray>."
+gmc-target: "<gray>Your gamemode was set to <white>Creative<gray> by <white>%sender%<gray>."
 
-gmsp-success-self: "&7Your gamemode was set to Spectator"
-gmsp-success-other: "&7%player%'s gamemode was set to Spectator"
-gmsp-success-target: "&7Your gamemode was set to Spectator by %sender%"
+gms-self: "<gray>Your gamemode was set to <white>Survival<gray>."
+gms-other: "<gray><white>%player%<gray>'s gamemode was set to <white>Survival<gray>."
+gms-target: "<gray>Your gamemode was set to <white>Survival<gray> by <white>%sender%<gray>."
 
-#Listeners
-join-message: "&fComing Soon!"
+gmsp-self: "<gray>Your gamemode was set to <white>Spectator<gray>."
+gmsp-other: "<gray><white>%player%<gray>'s gamemode was set to <white>Spectator<gray>."
+gmsp-target: "<gray>Your gamemode was set to <white>Spectator<gray> by <white>%sender%<gray>."
 
+gma-self: "<gray>Your gamemode was set to <white>Adventure<gray>."
+gma-other: "<gray><white>%player%<gray>'s gamemode was set to <white>Adventure<gray>."
+gma-target: "<gray>Your gamemode was set to <white>Adventure<gray> by <white>%sender%<gray>."
 
+fly-enabled: "<gray>Flight <white>enabled<gray>."
+fly-disabled: "<gray>Flight <white>disabled<gray>."
+fly-enabled-other: "<gray>Flight <white>enabled<gray> for <white>%player%<gray>."
+fly-disabled-other: "<gray>Flight <white>disabled<gray> for <white>%player%<gray>."
+fly-enabled-target: "<gray>Flight <white>enabled<gray> by <white>%sender%<gray>."
+fly-disabled-target: "<gray>Flight <white>disabled<gray> by <white>%sender%<gray>."
+
+flyspeed-self: "<gray>Fly speed set to <white>%speed%<gray>."
+flyspeed-other: "<gray>Fly speed of <white>%player%<gray> set to <white>%speed%<gray>."
+flyspeed-target: "<gray>Fly speed set to <white>%speed%<gray> by <white>%sender%<gray>."
+
+join-message: "<white>Coming soon!"
+config-reloaded: "<gray>Configuration reloaded."
+octane-usage: "<gray>Usage: <white>/octane reload"
