@@ -3,6 +3,7 @@ package sh.twenty.octane;
 import org.bukkit.plugin.java.JavaPlugin;
 import sh.twenty.octane.commands.*;
 import sh.twenty.octane.listeners.PlayerJoinListener;
+import sh.twenty.octane.listeners.SettingsListener;
 import sh.twenty.octane.managers.ConfigManager;
 import org.slf4j.Logger;
 
@@ -32,7 +33,6 @@ public final class Main extends JavaPlugin {
     public ConfigManager getConfigManager() {
         return configManager;
     }
-
     @Override
     public void onDisable() {
 
@@ -42,12 +42,13 @@ public final class Main extends JavaPlugin {
     }
 
     private void registerCommands(){
-        getCommand("feed").setExecutor(new FeedCommand(this));
-        getCommand("heal").setExecutor(new HealCommand(this));
-        getCommand("octane").setExecutor(new OctaneCommand(this));
-        getCommand("gmc").setExecutor(new GmcCommand(this));
-        getCommand("gms").setExecutor(new GmsCommand(this));
-        getCommand("gmsp").setExecutor(new GmspCommand(this));
+        new FeedCommand(this).register("feed");
+        new HealCommand(this).register("heal");
+        new OctaneCommand(this).register("octane");
+        new GmcCommand(this).register("gmc");
+        new GmsCommand(this).register("gms");
+        new GmspCommand(this).register("gmsp");
+        new SettingsCommand(this).register("settings");
     }
 
 
@@ -56,5 +57,6 @@ public final class Main extends JavaPlugin {
         org.bukkit.plugin.PluginManager pm = getServer().getPluginManager();
         // this registers the playerjoinlistener how i know
         pm.registerEvents(new PlayerJoinListener(this), this);
+        pm.registerEvents(new SettingsListener(this), this);
     }
 }

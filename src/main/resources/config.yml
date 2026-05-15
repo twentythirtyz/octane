@@ -1,3 +1,57 @@
-# octane core configuration file (config.yml)
+#octane config.yml remake
 
-some-setting: true
+
+# menus
+menus:
+    settings:
+        title: "&8Server Settings"
+        size: 27
+        items:
+            pvp:
+                slot: 11
+                true-state:
+                    material: LIME_WOOL
+                    name: "&e&lPvP Toggle"
+                    lore:
+                        - "&7Current: &aEnabled"
+                        - ""
+                        - "&eClick to disable!"
+                false-state:
+                    material: RED_WOOL
+                    name: "&e&lPvP Toggle"
+                    lore:
+                        - "&7Current: &cDisabled"
+                        - ""
+                        - "&eClick to enable!"
+            time:
+                slot: 13
+                true-state:
+                    material: SUNFLOWER
+                    name: "&b&lTime Toggle"
+                    lore:
+                        - "&7Current: &eDay"
+                        - ""
+                        - "&eClick to set Night!"
+                false-state:
+                    material: CLOCK
+                    name: "&b&lTime Toggle"
+                    lore:
+                        - "&7Current: &9Night"
+                        - ""
+                        - "&eClick to set Day!"
+            weather:
+                slot: 15
+                true-state:
+                    material: WATER_BUCKET
+                    name: "&d&lWeather Toggle"
+                    lore:
+                        - "&7Current: &9Raining"
+                        - ""
+                        - "&eClick to clear weather!"
+                false-state:
+                    material: LAVA_BUCKET
+                    name: "&d&lWeather Toggle"
+                    lore:
+                        - "&7Current: &6Clear"
+                        - ""
+                        - "&eClick to make it rain!"

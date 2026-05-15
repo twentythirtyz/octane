@@ -5,7 +5,7 @@ plugins {
 
 
 group = "sh.twenty.octane"
-version = "1.0-SNAPSHOT"
+version = "1.1-SNAPSHOT"
 
 
 val paperVersion = "1.21.1-R0.1-SNAPSHOT"
@@ -63,6 +63,14 @@ bukkit {
         register("gms"){
             description = "Sets the player's gamemode to survival."
             usage = "/gms"
+        }
+        register("gmsp"){
+            description = "Sets the player's gamemode to spectator."
+            usage = "/gmsp"
+        }
+        register("settings"){
+            description = "Opens the server settings GUI."
+            usage = "/settings"
         }
     }
 }
